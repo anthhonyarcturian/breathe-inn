@@ -1,0 +1,1 @@
+V64: SEO-basis. De canonical, sitemap en structured data verwijzen naar https://breathe-inn.nl/. Publiceer pas op dit domein wanneer het gekoppeld is. Netlify-testdomeinen worden niet als canonieke site gebruikt. Google Search Console na publicatie instellen. Geen zichtbare teksten of opmaak aangepast.

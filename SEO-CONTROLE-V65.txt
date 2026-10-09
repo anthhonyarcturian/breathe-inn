@@ -1,0 +1,32 @@
+BREATHE-INN – SEO-CONTROLE V65 (9 oktober 2026)
+
+UITGEVOERD
+- De originele V64-website is als basis gebruikt.
+- JSON-LD vereenvoudigd en opgesplitst in WebSite en ProfessionalService.
+- Naam, IJmuiden, e-mailadres, prijs en dienstverlening in gestructureerde gegevens behouden.
+- Bestaande paginatitel, meta description, canonical, Open Graph, robots.txt en sitemap.xml behouden.
+- Geen zichtbare teksten, CSS, JavaScript, afbeeldingen of navigatie aangepast.
+
+GECONTROLEERD
+- Eén H1, Nederlands als documenttaal, alle zichtbare afbeeldingen hebben alt-tekst.
+- Formspree-contactformulier blijft ongewijzigd.
+- sitemap.xml verwijst naar https://breathe-inn.nl/; robots.txt verwijst naar de sitemap.
+- index.html staat in de hoofdmap van de ZIP (Netlify Drop).
+
+ZOEKWOORDENPLAN (RELEVANTIE-HYPOTHESES; GEEN GEMETEN ZOEKVOLUMES)
+Primair: ademcoaching IJmuiden
+Secundair: ademsessie IJmuiden; ademwerk IJmuiden; ademcoach IJmuiden
+Informatief: wat is ademwerk; wat kun je verwachten van een ademsessie; ademhaling en ontspanning
+Regionale uitbreiding alleen na bevestiging dat klanten uit omliggende plaatsen worden bediend.
+
+NOG NIET AANGEPAST – EERST OVERLEGGEN
+- De zichtbare H1 noemt 'ademcoaching IJmuiden' nog niet; voorstel: locatie natuurlijk verwerken in de introductie.
+- Formuleringen over 'traumaverwerking', 'helende energieën' en resultaatbeloften verdienen inhoudelijke en veiligheidsreview.
+- Juridische vrijwaring is niet gecontroleerd op geldigheid.
+- Publicatie, indexering, Google Search Console, Google Bedrijfsprofiel en prestaties vereisen live site.
+- Geen daadwerkelijke zoekvolumes of Google-posities vastgesteld.
+
+ZELF CONTROLEREN
+Pak de ZIP uit. Open index.html en zoek naar application/ld+json, canonical, description.
+Open robots.txt en sitemap.xml. Upload ZIP naar Netlify Drop voor visuele vergelijking.
+Na publicatie: https://search.google.com/test/rich-results en https://pagespeed.web.dev/.

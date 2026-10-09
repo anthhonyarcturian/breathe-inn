@@ -1,0 +1,7 @@
+V66 – Lokale SEO IJmuiden en regio
+
+Aangepast: de kleine regel boven de hoofdkop, de introductie op de home-sectie, de titel en inleidende tekst van de sectie Ademcoaching en een regionale zin.
+
+Ongewijzigd: overige secties, reviews, fotografie, CSS, navigatie, formulier, scripts en technische SEO uit V65.
+
+Controle: open index.html in browser, controleer desktop en mobiel, test menu en contactformulier (zonder een onnodige testinzending).

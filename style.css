@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap');
+:root{--bg:#020914;--panel:#061525;--cyan:#00bfff;--cyan2:#0879bd;--text:#eef7ff;--muted:#a9bfd0;--line:rgba(0,184,255,.24);--soft:rgba(0,191,255,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden;position:relative}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(circle at 14% 18%,rgba(70,190,255,.55) 0 1px,transparent 1.6px),radial-gradient(circle at 76% 14%,rgba(255,255,255,.35) 0 1px,transparent 1.5px),radial-gradient(circle at 62% 72%,rgba(0,174,255,.32) 0 1px,transparent 1.5px);background-size:190px 170px,260px 230px,330px 290px;z-index:0}.nebula{position:fixed;border-radius:50%;pointer-events:none;filter:blur(70px);opacity:.12}.nebula-a{width:600px;height:600px;background:#006eb4;left:35%;top:10%}.nebula-b{width:500px;height:500px;background:#00418a;right:-150px;bottom:10%}
+.topbar{position:absolute;left:315px;right:0;top:18px;z-index:20;text-align:center}.brand img{width:205px;height:auto;filter:drop-shadow(0 0 17px rgba(0,191,255,.23));mix-blend-mode:screen;opacity:.95}.lung-nav{position:fixed;left:0;top:0;height:100vh;width:315px;z-index:30;display:flex;align-items:center;justify-content:center}.lung-outline{position:absolute;width:290px;height:520px;fill:rgba(0,120,210,.06);stroke:rgba(0,174,255,.65);stroke-width:2;filter:drop-shadow(0 0 14px rgba(0,174,255,.45));left:5px}.lung-outline path+path{stroke-width:1.5}.lung-glow{position:absolute;width:220px;height:390px;border-radius:50%;background:rgba(0,134,255,.12);filter:blur(45px)}.lung-nav nav{position:relative;width:235px;display:flex;flex-direction:column;gap:7px;margin-left:-6px}.nav-pill{display:flex;align-items:center;gap:15px;height:48px;padding:0 25px;border:1px solid rgba(0,184,255,.32);border-radius:32px 45px 45px 32px;background:linear-gradient(90deg,rgba(0,113,190,.34),rgba(0,29,56,.54));color:#d9efff;text-decoration:none;font-size:14px;box-shadow:inset 0 0 18px rgba(0,174,255,.06),0 5px 18px rgba(0,0,0,.22);transition:.28s transform,.28s background,.28s box-shadow}.nav-pill:nth-child(2){margin-left:8px}.nav-pill:nth-child(3){margin-left:12px}.nav-pill:nth-child(4){margin-left:8px}.nav-pill:nth-child(5){margin-left:4px}.nav-pill:nth-child(6){margin-left:0}.nav-pill:nth-child(7){margin-left:5px}.nav-pill:hover,.nav-pill.active{transform:translateX(7px);background:linear-gradient(90deg,rgba(0,151,239,.65),rgba(0,50,89,.7));box-shadow:0 0 25px rgba(0,174,255,.2),inset 0 0 18px rgba(0,191,255,.14)}.nav-pill span{font-size:22px;color:#8ddfff}.section{min-height:100vh;position:relative}.hero{min-height:780px;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 70px 70px 340px;overflow:hidden;background:radial-gradient(circle at 58% 45%,rgba(0,100,180,.18),transparent 35%),linear-gradient(180deg,#020914 0%,#03101d 55%,#020914 100%)}.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(0,120,210,.1);filter:blur(80px);left:55%;top:40%;transform:translate(-50%,-50%)}.hero-content{position:relative;z-index:3;max-width:720px}.eyebrow{font-size:11px;letter-spacing:5px;color:#00bfff;font-weight:500;margin-bottom:16px}.hero h1{font-family:Manrope,Inter,sans-serif;font-size:76px;line-height:1.02;font-weight:300;letter-spacing:-3px;margin:0 0 22px}.hero h1 em{font-style:normal;color:#00bfff}.hero p{font-size:18px;line-height:1.7;color:#c1d4e2;max-width:650px;margin:0 auto}.hero-actions{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}.cta{display:inline-flex;align-items:center;gap:25px;margin-top:26px;padding:13px 22px;border:1px solid #00bfff;border-radius:28px;color:#00d0ff;text-decoration:none;font-size:14px;box-shadow:0 0 18px rgba(0,191,255,.13);transition:.25s}.cta:hover{background:rgba(0,191,255,.12);box-shadow:0 0 28px rgba(0,191,255,.28);transform:translateY(-2px)}.cta span{font-size:20px}.ghost{margin-top:26px;color:#b8cbd8;font-size:14px}.hero-symbol{position:absolute;width:500px;height:500px;right:7%;bottom:-180px;opacity:.5}.orb{position:absolute;inset:130px;border-radius:50%;background:radial-gradient(circle at 38% 32%,rgba(190,246,255,.8),rgba(0,178,235,.35) 16%,rgba(0,80,140,.12) 52%,transparent 70%);box-shadow:0 0 100px rgba(0,191,255,.22)}.ring{position:absolute;border:1px solid rgba(0,191,255,.22);border-radius:50%;inset:55px}.ring2{inset:5px;border-color:rgba(0,191,255,.09)}
+.facts{position:relative;margin-left:315px;margin-right:5%;display:grid;grid-template-columns:repeat(4,1fr) 1.15fr;gap:18px;align-items:start;padding:30px 35px 48px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(2,9,20,.12),rgba(2,9,20,.82))}.facts article{text-align:center}.icon,.benefit-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;border:1px solid rgba(0,191,255,.7);color:#00c8ff;font-size:25px;box-shadow:0 0 18px rgba(0,191,255,.18)}h3{margin:0 0 8px;font-size:15px}.facts p{margin:0;color:#a9bfd0;font-size:13px;line-height:1.55}.facts blockquote{margin:0;border-left:1px solid #00aee8;padding:5px 0 5px 25px;color:#c7d9e5;font-style:italic;line-height:1.65;text-align:center}
+.content-section{margin-left:315px;padding:110px 7% 90px;max-width:1450px;min-height:auto}.section-heading{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:end;border-bottom:1px solid rgba(0,174,255,.16);padding-bottom:30px}.section-heading h2{font-family:Manrope,sans-serif;font-size:43px;line-height:1.1;font-weight:300;letter-spacing:-1.5px;margin:0}.section-heading>p{color:#b5cad8;font-size:16px;line-height:1.75;margin:0}.text-wide{max-width:950px;padding-top:30px;color:#b8ccd9;font-size:16px;line-height:1.85}.text-wide p{margin:0 0 20px}.breathwork{background:radial-gradient(circle at 85% 50%,rgba(0,100,180,.12),transparent 40%)}.breath-grid{display:grid;grid-template-columns:1fr .9fr;gap:50px;padding-top:35px}.breath-copy{color:#b8ccd9;font-size:15px;line-height:1.8}.breath-copy h3{color:#eef7ff;margin-top:27px}.session-images{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;max-width:760px}.session-images figure{margin:0}.session-images figure:nth-child(2){margin-top:75px}.session-images img{width:100%;aspect-ratio:1.12;object-fit:cover;border-radius:20px;border:1px solid rgba(0,191,255,.22);box-shadow:0 18px 50px rgba(0,0,0,.3);filter:saturate(.9)}.suitable,.panel{background:rgba(6,21,37,.55);border:1px solid rgba(0,184,255,.18);border-radius:22px;padding:26px;margin-top:30px}.suitable p,.panel p{color:#b8ccd9;line-height:1.75}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-top:38px}.steps article{padding:27px;border:1px solid var(--line);border-radius:22px;background:rgba(6,21,37,.55)}.steps span{display:block;color:#00bfff;font-size:12px;letter-spacing:3px;margin-bottom:18px}.steps h3{font-size:19px}.steps p{color:#b8ccd9;font-size:14px;line-height:1.75}.practical-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:18px}.practical-grid ul,.safety-grid ul,.contra ul{padding-left:19px;color:#b8ccd9;line-height:1.75}.price{font-family:Manrope;font-size:58px;font-weight:300;color:#fff}.price-panel{text-align:center}.price-panel .eyebrow{margin-bottom:7px}.price-panel p{margin:0}.safety{background:linear-gradient(180deg,rgba(2,9,20,.3),rgba(4,17,30,.75))}.safety-intro{max-width:1000px;color:#b8ccd9;line-height:1.8;padding-top:30px}.safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.safety-grid .panel{margin-top:18px}.contra{margin-top:18px}.columns{columns:2;column-gap:45px}.columns li{break-inside:avoid;margin-bottom:7px}.waiver blockquote{margin:18px 0 0;padding:18px 20px;border-left:2px solid #00bfff;background:rgba(0,191,255,.045);color:#c7d9e5;font-style:italic;line-height:1.8}.medical{border-left:2px solid #00bfff}.about-section{background:radial-gradient(circle at 20% 45%,rgba(0,101,180,.12),transparent 45%)}.about-grid{display:grid;grid-template-columns:340px 1fr;gap:65px;align-items:start;padding-top:40px}.about-photo{position:sticky;top:45px}.about-photo img{width:100%;border-radius:24px;border:1px solid rgba(0,191,255,.2);box-shadow:0 20px 60px rgba(0,0,0,.35)}.about-copy{max-width:780px;color:#b8ccd9;font-size:15px;line-height:1.85}.about-copy h2{font-family:Manrope;font-size:48px;font-weight:300;color:#fff;margin:0 0 3px}.about-lead{color:#00bfff;font-size:17px;margin:0 0 25px}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-top:35px}.review{min-height:170px;padding:25px;border:1px solid var(--line);border-radius:22px;background:rgba(6,21,37,.5)}.stars{color:#00c8ff;letter-spacing:3px}.review p{font-size:16px}.review span{color:#738d9e;font-size:12px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-top:35px}.contact-grid>div>p{color:#b8ccd9;line-height:1.8}.contact-card{border-left:2px solid #00bfff;background:rgba(0,191,255,.045);padding:18px 20px;margin:25px 0}.contact-card p{margin:6px 0 0;color:#9eb6c6}.form-placeholder{padding:28px;border:1px solid var(--line);border-radius:22px;background:rgba(6,21,37,.55)}.form-placeholder label{display:block;color:#9eb6c6;font-size:12px;margin-top:15px}.form-placeholder input,.form-placeholder textarea{display:block;width:100%;margin-top:6px;background:rgba(0,0,0,.2);border:1px solid rgba(0,184,255,.2);border-radius:12px;color:#fff;padding:12px;font:inherit}.form-placeholder textarea{min-height:120px;resize:vertical}.form-placeholder button{margin-top:16px;border:1px solid #00bfff;background:transparent;color:#00cfff;border-radius:25px;padding:11px 20px;cursor:pointer}footer{margin-left:315px;padding:22px 30px 30px;color:#7f9cad;font-size:12px;letter-spacing:1px;display:flex;gap:14px;justify-content:center;border-top:1px solid rgba(0,174,255,.15)}
+@media(max-width:1050px){.topbar{left:220px}.lung-nav{width:210px}.lung-outline{width:205px}.lung-nav nav{width:170px}.nav-pill{height:43px;padding:0 15px;gap:9px;font-size:12px}.hero{padding-left:225px}.content-section,.facts{margin-left:210px}.section-heading{grid-template-columns:1fr}.breath-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.about-photo{position:relative;top:auto;max-width:340px}.steps,.safety-grid,.review-grid{grid-template-columns:1fr}.practical-grid{grid-template-columns:1fr}.hero-symbol{right:-100px}.columns{columns:1}footer{margin-left:210px}}
+@media(max-width:700px){.topbar{left:0;right:0;top:14px}.brand img{width:155px}.lung-nav{position:fixed;top:auto;bottom:0;left:0;width:100%;height:72px;background:rgba(2,9,20,.94);backdrop-filter:blur(15px);border-top:1px solid rgba(0,174,255,.25)}.lung-outline,.lung-glow{display:none}.lung-nav nav{width:100%;margin:0;flex-direction:row;justify-content:space-around;gap:4px;padding:7px}.nav-pill,.nav-pill:nth-child(n){margin:0;flex:1;height:56px;padding:0;justify-content:center;border-radius:18px;font-size:0;background:rgba(0,53,85,.35)}.nav-pill span{font-size:23px}.nav-pill b{display:none}.hero{height:auto;min-height:760px;padding:155px 24px 90px;display:flex}.hero h1{font-size:52px}.hero p{font-size:15px}.hero-symbol{width:350px;height:350px;right:50%;bottom:-90px;transform:translateX(50%);opacity:.38}.facts,.content-section{margin:0}.facts{grid-template-columns:1fr 1fr;padding:45px 24px 60px;gap:28px 15px}.facts blockquote{grid-column:1/-1;border-left:0;border-top:1px solid #00aee8;padding:20px 0 0}.content-section{padding:85px 24px 70px}.section-heading h2{font-size:35px}.breath-grid{gap:25px}.session-images{gap:10px}.session-images figure:nth-child(2){margin-top:35px}.about-grid{gap:30px}.about-copy h2{font-size:40px}.contact-grid{gap:10px}.form-placeholder{margin-top:20px}footer{margin:0;padding:20px 20px 100px;flex-wrap:wrap}.eyebrow{letter-spacing:3px;font-size:9px}}
+@media(max-width:430px){.brand img{width:140px}.hero h1{font-size:46px}.facts{grid-template-columns:1fr}.facts blockquote{grid-column:auto}.session-images{grid-template-columns:1fr}.session-images figure:nth-child(2){margin-top:0}.nav-pill{height:52px}.nav-pill span{font-size:21px}.content-section{padding-left:19px;padding-right:19px}}
+
+/* v7 refinements */
+.topbar{background:linear-gradient(90deg,rgba(2,9,20,.72),rgba(2,9,20,.25),transparent);border:0;box-shadow:none}
+.brand img{width:255px;height:auto;display:block;filter:drop-shadow(0 0 12px rgba(0,191,255,.16))}
+.lung-nav{z-index:10}
+@media(max-width:700px){
+ .topbar{top:8px;padding:8px 14px}
+ .brand img{width:205px}
+ .session-images{grid-template-columns:1fr 1fr;gap:10px;max-width:none}
+ .session-images figure:nth-child(2){margin-top:28px}
+ .session-images img{aspect-ratio:1.05;border-radius:15px}
+}
+@media(max-width:430px){
+ .brand img{width:185px}
+ .session-images{grid-template-columns:1fr}
+ .session-images figure:nth-child(2){margin-top:0}
+ .session-images img{aspect-ratio:1.15}
+}
+
+
+/* ===============================
+   v8 — exact lung navigation artwork
+   =============================== */
+.topbar{left:315px;right:24px;top:14px;text-align:left;background:transparent;padding-left:20px;}
+.brand img{width:210px;height:auto;filter:drop-shadow(0 0 7px rgba(0,191,255,.34)) drop-shadow(0 0 20px rgba(0,100,190,.18));mix-blend-mode:screen;opacity:.94;}
+.lung-nav{width:315px;align-items:flex-start;justify-content:flex-start;}
+.lung-menu-art{position:relative;width:286px;height:auto;margin:18px 0 0 4px;filter:drop-shadow(0 0 18px rgba(0,130,255,.18));}
+.lung-menu-image{display:block;width:100%;height:auto;user-select:none;pointer-events:none;}
+.lung-hotspot{position:absolute;left:13%;width:74%;height:10.5%;border-radius:50px;text-decoration:none;z-index:3;outline:none;background:transparent;}
+.lung-hotspot span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.lung-hotspot:hover{background:rgba(0,190,255,.07);box-shadow:0 0 22px rgba(0,190,255,.18);}
+.lung-hotspot:focus-visible{background:rgba(0,190,255,.12);box-shadow:0 0 0 2px rgba(100,225,255,.8),0 0 26px rgba(0,190,255,.35);}
+.hotspot-home{top:27.9%}.hotspot-breath{top:39.2%}.hotspot-session{top:49.9%}.hotspot-about{top:60.4%}.hotspot-contact{top:70.9%}
+/* The artwork itself supplies the visible labels and pills. */
+.lung-nav nav,.lung-outline,.lung-glow{display:none!important}
+
+@media(max-width:1050px){
+ .topbar{left:220px;padding-left:12px}.lung-nav{width:220px}.lung-menu-art{width:205px;margin-left:4px}.content-section,.facts{margin-left:220px}.hero{padding-left:235px}.lung-hotspot{left:12%;width:76%}
+}
+@media(max-width:700px){
+ body{padding-bottom:0}
+ .topbar{position:absolute;left:0;right:0;top:6px;text-align:center;padding:0 12px;z-index:40}
+ .brand img{width:185px;margin:0 auto;filter:drop-shadow(0 0 8px rgba(0,191,255,.38)) drop-shadow(0 0 24px rgba(0,100,190,.22));}
+ .lung-nav{position:fixed;left:10px;bottom:12px;top:auto;width:158px;height:auto;z-index:50;display:block;pointer-events:none;}
+ .lung-menu-art{width:158px;margin:0;pointer-events:auto;}
+ .lung-hotspot{left:13%;width:74%;height:10.5%;}
+ .hotspot-home{top:27.9%}.hotspot-breath{top:39.2%}.hotspot-session{top:49.9%}.hotspot-about{top:60.4%}.hotspot-contact{top:70.9%}
+ .hero{padding-top:155px;padding-left:24px;padding-right:24px;padding-bottom:100px;min-height:760px}
+ .facts,.content-section{margin-left:0}
+ .content-section{padding-bottom:80px}
+ footer{padding-bottom:35px}
+}
+@media(max-width:430px){
+ .brand img{width:170px}
+ .lung-nav{left:6px;bottom:8px;width:140px}.lung-menu-art{width:140px}
+ .hero{padding-top:145px}
+}
+
+/* ===============================
+   v9 — seamless background, centered logo,
+   active-state lung navigation and aligned photos
+   =============================== */
+.topbar{
+  left:315px;
+  right:24px;
+  top:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:transparent;
+  padding:0;
+  z-index:40;
+}
+.brand img{
+  width:245px;
+  height:auto;
+  filter:drop-shadow(0 0 9px rgba(0,191,255,.42)) drop-shadow(0 0 26px rgba(0,100,190,.20));
+  mix-blend-mode:screen;
+  opacity:.96;
+}
+.lung-nav{
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.lung-menu-art{
+  background:transparent;
+  filter:drop-shadow(0 0 20px rgba(0,130,255,.17));
+}
+.lung-menu-image{
+  background:transparent;
+}
+.lung-hotspot:hover{background:rgba(0,190,255,.045);box-shadow:0 0 22px rgba(0,190,255,.14)}
+.session-images{align-items:stretch}
+.session-images figure:nth-child(2){margin-top:0!important}
+.session-images img{transform:none!important;aspect-ratio:1.12;object-fit:cover}
+
+@media(max-width:1050px){
+  .topbar{left:220px;right:12px}
+  .brand img{width:215px}
+}
+@media(max-width:700px){
+  .topbar{position:absolute;left:0;right:0;top:8px;justify-content:center;padding:0 12px}
+  .brand img{width:205px}
+  .lung-nav{background:transparent!important;border:0!important;box-shadow:none!important}
+  .session-images{grid-template-columns:1fr 1fr;gap:12px}
+  .session-images img{aspect-ratio:1.02}
+}
+@media(max-width:430px){
+  .brand img{width:185px}
+  .session-images{grid-template-columns:1fr 1fr;gap:8px}
+  .session-images img{aspect-ratio:1.05}
+}
+
+/* v17 — reliable image-based lung navigation */
+.lung-menu-art{position:relative;isolation:isolate}
+.lung-menu-image{position:relative;z-index:1;pointer-events:none}
+.lung-hotspot{z-index:20!important;display:block!important;cursor:pointer!important;pointer-events:auto!important;background:transparent!important;box-shadow:none!important;border:0!important}
+.lung-hotspot:hover,.lung-hotspot:focus,.lung-hotspot.active{background:transparent!important;box-shadow:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media(max-width:700px){html{scroll-padding-top:90px}}
+main section[id]{scroll-margin-top:24px}
+@media(max-width:700px){main section[id]{scroll-margin-top:88px}}
+
+/* v20 — restore the complete original lung artwork without cropping. */
+.lung-menu-art{overflow:visible!important}
+.lung-menu-image{width:100%!important;height:auto!important;object-fit:contain!important;object-position:center center!important;clip-path:none!important}
+\n/* Active/hover state: invisible hitbox, only a soft glow around the existing circle+word region. */
+.lung-hotspot::after{content:"";position:absolute;inset:14% 2%;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .18s ease;box-shadow:0 0 18px rgba(0,190,255,.0);background:radial-gradient(ellipse at 38% 50%,rgba(0,190,255,.18),rgba(0,190,255,.05) 42%,transparent 72%)}
+.lung-hotspot:hover::after,.lung-hotspot:focus-visible::after,.lung-hotspot.active::after{opacity:1;box-shadow:0 0 20px rgba(0,190,255,.16)}
+\n/* v21 — untouched lung artwork, transparent outside background, exact invisible click zones */
+.lung-nav{overflow:visible!important;background:transparent!important}
+.lung-menu-art{overflow:visible!important;background:transparent!important}
+.lung-menu-image{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important;clip-path:none!important;background:transparent!important}
+.lung-hotspot,.lung-hotspot:hover,.lung-hotspot:focus,.lung-hotspot.active{background:transparent!important;border:0!important;outline:0!important;box-shadow:none!important}
+.lung-hotspot::after{display:none!important}
+/* zones align to the visible rows in the 336x515 artwork */
+.hotspot-home{top:27.1%!important;height:10.0%!important}
+.hotspot-breath{top:38.0%!important;height:10.0%!important}
+.hotspot-session{top:48.8%!important;height:10.0%!important}
+.hotspot-about{top:59.3%!important;height:10.0%!important}
+.hotspot-contact{top:69.8%!important;height:10.0%!important}
+.lung-hotspot{left:10%!important;width:80%!important}
+
+/* v23 — V8 lung silhouette + independent hover/active navigation */
+.lung-menu-image{content:url('images/lung-v8-transparent-dim.png')!important;}
+.lung-hotspot{overflow:visible!important;}
+.lung-hotspot::before,.lung-hotspot::after{content:"";position:absolute;pointer-events:none;opacity:0;transition:opacity .18s ease,filter .18s ease;}
+/* small circle glow */
+.lung-hotspot::before{left:9%;top:50%;width:20px;height:20px;transform:translate(-50%,-50%);border-radius:50%;border:1.5px solid rgba(105,224,255,.85);box-shadow:0 0 8px rgba(0,190,255,.55),inset 0 0 7px rgba(0,190,255,.24);}
+/* soft glow over the word, no visible box */
+.lung-hotspot::after{left:18%;right:10%;top:24%;bottom:24%;border-radius:999px;background:radial-gradient(ellipse at 42% 50%,rgba(70,205,255,.22) 0%,rgba(0,170,255,.08) 44%,transparent 74%);filter:blur(3px);}
+.lung-hotspot:hover::before,.lung-hotspot:hover::after,.lung-hotspot:focus-visible::before,.lung-hotspot:focus-visible::after{opacity:.58!important;}
+.lung-hotspot.active::before,.lung-hotspot.active::after{opacity:1!important;}
+.lung-hotspot.active::before{border-color:#e8fbff;box-shadow:0 0 8px #fff,0 0 17px rgba(0,190,255,.95),inset 0 0 8px rgba(0,190,255,.5);}
+.lung-hotspot.active::after{background:radial-gradient(ellipse at 42% 50%,rgba(90,220,255,.38) 0%,rgba(0,180,255,.14) 45%,transparent 75%);filter:blur(3px);}
+
+/* V32 — originele aangeleverde longfoto, alleen bestaand bolletje licht op */
+.lung-menu-image{
+  content:normal!important;
+}
+.lung-hotspot::after{
+  display:none!important;
+  content:none!important;
+}
+.lung-hotspot::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:17.7%!important;
+  top:50%!important;
+  width:24px!important;
+  height:24px!important;
+  transform:translate(-50%,-50%)!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,rgba(255,255,255,.95) 0 12%,rgba(80,220,255,.72) 25%,rgba(0,180,255,.30) 48%,transparent 72%)!important;
+  box-shadow:none!important;
+  filter:blur(1px)!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  transition:opacity .18s ease!important;
+}
+.lung-hotspot:hover::before,
+.lung-hotspot:focus-visible::before{
+  opacity:0!important;
+}
+.lung-hotspot.active::before{
+  opacity:1!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+
+/* V33 — keep V32 lungs/buttons unchanged; center active glow on existing dots; extend lung cosmic texture across site */
+body{
+  background:#020914 url('images/cosmic-background-from-lungs.jpg') center top / cover fixed!important;
+}
+body:before{opacity:.10!important;}
+.hero,.breathwork,.safety,.about-section{background:transparent!important;}
+/* retain subtle readable depth without replacing the cosmic background */
+.section,.facts,.content-section,footer{background-color:transparent!important;}
+.lung-hotspot::before{top:60%!important;}
+
+/* V40 — uitsluitend de algemene websiteachtergrond gewijzigd.
+   Rustige, doorlopende kosmos zonder herhalende achtergrondafbeelding. */
+html {
+  background: #010611 !important;
+}
+
+body {
+  background-color: #010611 !important;
+  background-image:
+    radial-gradient(ellipse at 14% 10%, rgba(15, 74, 130, .22) 0%, rgba(7, 34, 68, .10) 24%, transparent 50%),
+    radial-gradient(ellipse at 86% 28%, rgba(11, 61, 111, .18) 0%, rgba(5, 28, 58, .08) 27%, transparent 54%),
+    radial-gradient(ellipse at 35% 70%, rgba(7, 48, 91, .12) 0%, transparent 48%),
+    radial-gradient(ellipse at 78% 88%, rgba(9, 52, 98, .10) 0%, transparent 44%),
+    radial-gradient(circle at 18% 24%, rgba(164, 215, 255, .34) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 71% 16%, rgba(137, 202, 255, .28) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 89% 61%, rgba(172, 220, 255, .24) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 43% 39%, rgba(126, 194, 255, .20) 0 1px, transparent 1.3px),
+    radial-gradient(circle at 62% 78%, rgba(153, 209, 255, .22) 0 1px, transparent 1.4px),
+    linear-gradient(180deg, #020915 0%, #010711 48%, #020a16 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+/* Bestaande sectie-opvullingen transparant zodat dezelfde kosmos
+   als één rustige achtergrond door de volledige pagina loopt. */
+.hero,
+.breathwork,
+.safety,
+.about-section,
+.section,
+.facts,
+.content-section,
+footer {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* V41 — ONLY background visibility increased. Lungs/text/navigation untouched. */
+html,body{background-color:#010712!important;}
+body{
+ background-image:url('images/cosmic-background-v41.jpg')!important;
+ background-position:center top!important;
+ background-size:cover!important;
+ background-repeat:no-repeat!important;
+ background-attachment:fixed!important;
+}
+.hero,.breathwork,.safety,.about-section,.section,.facts,.content-section,footer{
+ background-color:transparent!important;
+ background-image:none!important;
+}
+
+/* V42 — V41 preserved. Only visual integration of the existing lung PNG.
+   Navigation, text, hotspots, positions and cosmic page background are untouched. */
+.lung-menu-image{
+  filter:
+    drop-shadow(0 0 10px rgba(0,145,255,.18))
+    drop-shadow(0 0 28px rgba(0,90,190,.10));
+}
+
+/* V43 — only smoother integration of the existing lung artwork.
+   V41/V42 background, text, buttons, hotspots and navigation remain unchanged. */
+.lung-menu-image{
+  filter:
+    drop-shadow(0 0 14px rgba(0,150,255,.20))
+    drop-shadow(0 0 34px rgba(0,105,210,.13))
+    drop-shadow(0 0 58px rgba(0,70,150,.07)) !important;
+}
+
+/* V52 — clean standalone navigation; no lung artwork or legacy lung-hotspot styling. */
+.side-nav{
+  position:fixed;
+  z-index:50;
+  left:34px;
+  top:50%;
+  transform:translateY(-50%);
+  width:190px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.side-nav-link{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-height:34px;
+  padding:4px 0;
+  color:#dff4ff;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:.01em;
+}
+.side-nav-label{
+  display:block;
+  opacity:1;
+  visibility:visible;
+  color:#dff4ff;
+  text-shadow:0 0 10px rgba(75,190,255,.12);
+}
+.side-nav-dot{
+  flex:0 0 auto;
+  width:16px;
+  height:16px;
+  border:2px solid #6bdcff;
+  border-radius:50%;
+  background:#031326;
+  box-shadow:0 0 7px rgba(70,205,255,.25);
+  transition:background .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.side-nav-link:hover .side-nav-dot{
+  box-shadow:0 0 8px rgba(110,225,255,.55),0 0 16px rgba(0,155,255,.28);
+}
+.side-nav-link.active .side-nav-dot{
+  background:#c9f7ff;
+  border-color:#effdff;
+  box-shadow:0 0 6px #fff,0 0 15px #62e5ff,0 0 27px rgba(0,150,255,.9);
+}
+.side-nav-link:focus-visible{
+  outline:1px solid rgba(115,220,255,.75);
+  outline-offset:6px;
+  border-radius:6px;
+}
+@media(max-width:1050px){
+  .side-nav{left:20px;width:165px;}
+}
+@media(max-width:700px){
+  .side-nav{
+    left:12px;
+    top:auto;
+    bottom:18px;
+    transform:none;
+    width:150px;
+    gap:7px;
+    padding:10px 12px;
+    border-radius:16px;
+    background:rgba(1,10,24,.72);
+    backdrop-filter:blur(8px);
+  }
+  .side-nav-link{font-size:14px;min-height:25px;gap:11px;padding:1px 0;}
+  .side-nav-dot{width:12px;height:12px;}
+}
+
+/* V53 — geschreven reviews; Google Reviews voorlopig vervangen. */
+.written-reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+.written-review{position:relative;padding:28px 26px 24px;border:1px solid rgba(85,190,255,.16);border-radius:18px;background:rgba(2,15,31,.46);box-shadow:0 14px 40px rgba(0,0,0,.14);backdrop-filter:blur(4px)}
+.review-quote{height:34px;font-size:44px;line-height:34px;color:#69d9ff;opacity:.75}
+.review-text p{margin:0 0 14px;line-height:1.7}
+.review-text p:last-child{margin-bottom:0}
+.review-author{margin-top:22px;color:#8ddfff;font-weight:600}
+@media(max-width:900px){.written-reviews{grid-template-columns:1fr}}
+
+/* V55 — Formspree contact feedback */
+.form-status{min-height:1.5em;color:#8ddfff;margin:8px 0 14px}
+#contactForm button:disabled{opacity:.6;cursor:wait}
+
+/* V56 — contactformulier is hoofdcontact; e-mailadres subtiel eronder. */
+.contact-email-fallback{
+  margin-top:18px;
+  font-size:14px;
+  opacity:.78;
+}
+.contact-email-fallback a{
+  color:#8ddfff;
+  text-decoration:none;
+}
+.contact-email-fallback a:hover{
+  text-decoration:underline;
+}
+
+/* V59: responsive navigation. Desktop V58 unchanged. */
+.mobile-menu-toggle { display:none; }
+@media (max-width:700px) {
+  .mobile-menu-toggle {
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    position:fixed; z-index:101; top:calc(12px + env(safe-area-inset-top, 0px)); right:14px;
+    min-height:44px; padding:9px 15px; border:1px solid rgba(95,209,255,.5);
+    border-radius:999px; background:rgba(2,16,35,.93); color:#e4f6ff;
+    font:500 14px/1.2 inherit; letter-spacing:.02em; cursor:pointer;
+    box-shadow:0 5px 22px rgba(0,0,0,.32); backdrop-filter:blur(12px);
+  }
+  .mobile-menu-icon { font-size:21px; line-height:1; color:#8de5ff; }
+  .side-nav {
+    display:none !important; position:fixed !important;
+    z-index:100 !important; top:calc(65px + env(safe-area-inset-top, 0px)) !important;
+    right:14px !important; left:auto !important; bottom:auto !important;
+    transform:none !important; width:min(230px,calc(100vw - 28px)) !important;
+    gap:9px !important; padding:16px 18px !important;
+    border:1px solid rgba(77,180,235,.25) !important;
+    border-radius:18px !important; background:rgba(1,12,29,.96) !important;
+    box-shadow:0 15px 38px rgba(0,0,0,.48) !important;
+    backdrop-filter:blur(16px) !important;
+  }
+  .side-nav.mobile-open { display:flex !important; }
+  .side-nav-link { font-size:16px !important; min-height:42px !important; gap:14px !important; }
+  .side-nav-dot { width:15px !important; height:15px !important; }
+  .side-nav-label { font-size:16px !important; }
+  html,body { max-width:100%; overflow-x:clip; }
+}
+@media (prefers-reduced-motion:reduce) { .side-nav-dot { transition:none; } }
+
+/* V60: mobile-only refinements. Keep V59 navigation layout/behavior untouched. */
+@media (max-width:700px) {
+  /* Less empty vertical space between sections. */
+  .content-section { padding-top:52px; padding-bottom:48px; }
+  .section-heading { gap:18px; padding-bottom:24px; }
+  .text-wide { padding-top:22px; }
+  .breath-grid { padding-top:22px; gap:22px; }
+  .steps { padding-top:24px; gap:15px; }
+  .about-grid { padding-top:25px; }
+  .contact-grid { padding-top:24px; }
+  .safety-intro { padding-top:20px; }
+  .section-heading h2 { font-size:clamp(29px,7.4vw,35px); line-height:1.14; overflow-wrap:break-word; }
+  /* Body copy remains readable but takes up less vertical space. */
+  .text-wide,.breath-copy,.about-copy,.safety-intro,.section-heading>p,
+  .suitable p,.panel p,.steps p,.contact-grid>div>p,
+  .written-review .review-text { font-size:15px; line-height:1.7; }
+  .text-wide p { margin-bottom:16px; }
+  .steps article { padding:22px; }
+  .suitable,.panel { padding:21px; margin-top:22px; }
+  /* Headings avoid sitting beneath the persistent menu button. */
+  .content-section h3 { padding-right:115px; overflow-wrap:anywhere; }
+  .steps h3,.written-review h3 { padding-right:0; }
+}
+@media (max-width:430px) {
+  .content-section { padding:48px 19px 44px; }
+  .section-heading h2 { font-size:clamp(28px,7.5vw,33px); }
+}
+
+/* V61 — mobile reading rhythm, scoped to screenshot 3 onward.
+   No changes to navigation, hero, or the first two reviewed screens. */
+@media (max-width:700px) {
+  #sessie, #veiligheid, #over, #ervaringen, #contact {
+    padding-top:76px;
+    padding-bottom:76px;
+  }
+  #sessie .section-heading, #veiligheid .section-heading,
+  #over .section-heading, #contact .section-heading {
+    gap:24px; padding-bottom:32px;
+  }
+  #sessie .steps { gap:22px; padding-top:34px; }
+  #sessie .steps article { padding:26px 24px; }
+  #veiligheid .safety-grid { gap:22px; }
+  #veiligheid .panel { margin-top:26px; padding:25px 23px; }
+  #over .about-copy p { margin-bottom:24px; }
+  #ervaringen .written-reviews { gap:24px; }
+  #contact .contact-grid { padding-top:34px; }
+}
+@media (max-width:430px) {
+  #sessie, #veiligheid, #over, #ervaringen, #contact {
+    padding:72px 19px 70px;
+  }
+}
+
+/* V62: beide ademsessiefoto's zonder zichtbare omlijning of inline image-gap. */
+.session-images figure { overflow: hidden; border-radius: 20px; border: 0 !important; }
+.session-images img { display: block !important; border: 0 !important; outline: 0 !important; box-shadow: none !important; }
+@media(max-width:700px) { .session-images figure { border-radius: 15px; } }

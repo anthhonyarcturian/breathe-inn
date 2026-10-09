@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://breathe-inn.nl/sitemap.xml
